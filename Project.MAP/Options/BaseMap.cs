@@ -13,6 +13,17 @@ namespace Project.MAP.Options
         public BaseMap()
         {
             Property(x => x.CreatedDate).HasColumnName("Yaratılma Tarihi");
+            Property(x => x.DeletedDate).HasColumnName("Silinme Tarihi");
+            Property(x => x.ModifiedDate).HasColumnName("Güncellenme Tarihi");
+            Property(x => x.Status).HasColumnName("Veri Durumu");
+            Property(x => x.CreatedDate).HasColumnName("Yaratılma Tarihi");
+            Property(x => x.CreatedDate).HasColumnName("Yaratılma Tarihi");
+            Property(x => x.CreatedBy).HasColumnName("Yaratan Kişi");
+            Property(x => x.ModifiedBy).HasColumnName("Güncelleyen Kişi");
+            Property(x => x.DeletedBy).HasColumnName("Silen Kişi");
+            Property(x => x.CreatedComputerName).HasColumnName("Yaratılan Bilgisayar");
+
+
         }
     }
 }

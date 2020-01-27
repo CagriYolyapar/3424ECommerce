@@ -11,6 +11,7 @@ namespace Project.MAP.Options
     {
         public OrderDetailMap()
         {
+            ToTable("Satışlar");            
             Ignore(x => x.ID);
             HasKey(x => new
             {

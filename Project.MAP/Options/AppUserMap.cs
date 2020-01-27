@@ -15,6 +15,16 @@ namespace Project.MAP.Options
             ToTable("Kullanıcılar");
 
             HasOptional(x => x.AppUserDetail).WithRequired(x => x.AppUser);
+
+            Property(x => x.UserName).HasColumnName("Kullanıcı İsmi").IsRequired();
+            Property(x => x.Password).HasColumnName("Şifre").IsRequired();
+            Property(x => x.Email).HasColumnName("Mail Adresi").IsRequired();
+            Property(x => x.Role).HasColumnName("Kullanıcı Rolü");
+            Property(x => x.IsActive).HasColumnName("Aktif");
+            Property(x => x.ActivationCode).HasColumnName("Aktivasyon Kodu");
+            Property(x => x.IsBanned).HasColumnName("Yasaklı");
+            Property(x => x.Point).HasColumnName("Puan");
+
         }
     }
 }

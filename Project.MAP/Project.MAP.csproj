@@ -51,10 +51,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Options\AppUserDetailMap.cs" />
     <Compile Include="Options\AppUserMap.cs" />
     <Compile Include="Options\BaseMap.cs" />
+    <Compile Include="Options\CategoryMap.cs" />
+    <Compile Include="Options\CommentMap.cs" />
+    <Compile Include="Options\EntityAttributeMap.cs" />
     <Compile Include="Options\OrderDetailMap.cs" />
+    <Compile Include="Options\OrderMap.cs" />
     <Compile Include="Options\ProductAttributeMap.cs" />
+    <Compile Include="Options\ProductMap.cs" />
+    <Compile Include="Options\ShipperMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

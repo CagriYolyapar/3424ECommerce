@@ -19,9 +19,16 @@ namespace Project.DAL.Context
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Configurations.Add(new AppUserDetailMap());
             modelBuilder.Configurations.Add(new AppUserMap());
+            modelBuilder.Configurations.Add(new CategoryMap());
+            modelBuilder.Configurations.Add(new CommentMap());
+            modelBuilder.Configurations.Add(new EntityAttributeMap());
             modelBuilder.Configurations.Add(new OrderDetailMap());
+            modelBuilder.Configurations.Add(new OrderMap());
             modelBuilder.Configurations.Add(new ProductAttributeMap());
+            modelBuilder.Configurations.Add(new ProductMap());
+            modelBuilder.Configurations.Add(new ShipperMap());
         }
 
         public DbSet<AppUser> AppUsers { get; set; }
