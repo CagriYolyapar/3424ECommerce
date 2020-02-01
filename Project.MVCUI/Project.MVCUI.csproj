@@ -1939,6 +1939,7 @@
     <Content Include="OuterTools\FlatAdmin\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="OuterTools\FlatAdmin\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Product\ProductList.cshtml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -2028,6 +2029,7 @@
     <Compile Include="AuthenticationClasses\MemberAuth.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ShoppingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
