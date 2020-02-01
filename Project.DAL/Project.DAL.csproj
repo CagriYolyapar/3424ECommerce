@@ -51,7 +51,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context\MyContext.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StrategyPattern\MyInit.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Project.MAP\Project.MAP.csproj">
+      <Project>{018c265c-e2d2-4604-8e99-c571182334ed}</Project>
+      <Name>Project.MAP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Project.MODEL\Project.MODEL.csproj">
+      <Project>{39beaf97-dc12-47ee-a35f-983a61cb792e}</Project>
+      <Name>Project.MODEL</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

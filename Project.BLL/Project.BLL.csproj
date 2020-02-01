@@ -51,11 +51,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DesignPatterns\RepositoryPattern\BaseRep\BaseRepository.cs" />
+    <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\AppUserDetailRepository.cs" />
+    <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\AppUserRepository.cs" />
+    <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\CategoryRepository.cs" />
+    <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\CommentRepository.cs" />
+    <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\EntityAttributeRepository.cs" />
+    <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\OrderDetailRepository.cs" />
+    <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\OrderRepository.cs" />
+    <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\ProductAttributeRepository.cs" />
+    <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\ProductRepository.cs" />
+    <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\ShipperRepository.cs" />
+    <Compile Include="DesignPatterns\RepositoryPattern\IntRep\IRepository.cs" />
+    <Compile Include="DesignPatterns\SingletonPattern\DBTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Project.DAL\Project.DAL.csproj">
+      <Project>{f0b86b8a-1afa-4d51-8f08-071e3b49c190}</Project>
+      <Name>Project.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Project.MODEL\Project.MODEL.csproj">
+      <Project>{39beaf97-dc12-47ee-a35f-983a61cb792e}</Project>
+      <Name>Project.MODEL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
