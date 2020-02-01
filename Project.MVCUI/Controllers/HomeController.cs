@@ -31,38 +31,33 @@ namespace Project.MVCUI.Controllers
         [HttpPost]
         public ActionResult Register(AppUser item)
         {
-           if( !KullaniciKontrol(item, out ActionResult sonuc))
-           {
-                return sonuc;
-           }
-            else
-            {
-                arep.Add(item);
-                return sonuc;
-            }
+            return KullaniciKontrol(item);
 
            
+         
         }
 
-        private bool KullaniciKontrol(AppUser item, out ActionResult sonuc)
+        private ActionResult KullaniciKontrol(AppUser item)
         {
-
             if (arep.Any(x => x.UserName == item.UserName))
             {
-                TempData["kullaniciVar"] = "Bu kullanıcı ismi daha önce alınmıştır.";
-                sonuc = RedirectToAction("Register");
-                return false;
+                TempData["kullaniciVar"] = "Bu kullanızı ismi daha önce alınmıstır";
+               return RedirectToAction("Register");
+              
             }
-
             if (arep.Any(x => x.Email == item.Email))
             {
-                sonuc= RedirectToAction("Register");
-                TempData["kullaniciVar"] = "Bu email adresine ait bir kullanıcı bulunmaktadır.";
-                return false;
-            }
-            sonuc= RedirectToAction("Index");
-            return true;
+                
+                TempData["kullaniciVar"] = "Bu email adresine ait bir kullanıcı bulunmaktadır";
 
+
+               return RedirectToAction("Register");
+               
+
+            }
+            arep.Add(item);
+            return  RedirectToAction("Index");
+         
         }
     }
 }
