@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.MODEL.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,15 @@ namespace Project.MVCUI.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+        public ActionResult Register()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Register(AppUser item)
+        {
+            return RedirectToAction("Index");
         }
     }
 }
