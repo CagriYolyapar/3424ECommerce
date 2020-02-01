@@ -975,12 +975,14 @@
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-fileupload\bootstrap-fileupload.js" />
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-inputmask\bootstrap-inputmask.js" />
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-inputmask\bootstrap-inputmask.min.js" />
+    <Content Include="OuterTools\FlatAdmin\assets\bootstrap-switch\.gitignore" />
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-switch\examples\index.html" />
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-switch\static\js\bootstrap-switch.js" />
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-switch\static\js\bootstrap-switch.min.js" />
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-switch\static\stylesheets\bootstrap-switch-conquer.css" />
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-switch\static\stylesheets\bootstrap-switch.css" />
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-switch\static\stylesheets\flat-ui-fonts.css" />
+    <Content Include="OuterTools\FlatAdmin\assets\bootstrap-timepicker\.gitignore" />
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-timepicker\compiled\timepicker.css" />
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-timepicker\js\bootstrap-timepicker.js" />
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-wysihtml5\bootstrap-wysihtml5.css" />
@@ -1014,6 +1016,7 @@
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-wysihtml5\locales\bootstrap-wysihtml5.zh-TW.js" />
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-wysihtml5\wysihtml5-0.3.0.js" />
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-wysihtml5\wysiwyg-color.css" />
+    <Content Include="OuterTools\FlatAdmin\assets\chart-master\.gitignore" />
     <Content Include="OuterTools\FlatAdmin\assets\chart-master\Chart.js" />
     <Content Include="OuterTools\FlatAdmin\assets\chart-master\Chart.min.js" />
     <Content Include="OuterTools\FlatAdmin\assets\chart-master\docs\Chart.js" />
@@ -1258,6 +1261,7 @@
     <Content Include="OuterTools\FlatAdmin\assets\dropzone\images\spritemap%402x.png" />
     <Content Include="OuterTools\FlatAdmin\assets\dropzone\images\spritemap.png" />
     <Content Include="OuterTools\FlatAdmin\assets\dropzone\upload.php" />
+    <Content Include="OuterTools\FlatAdmin\assets\fancybox\.gitattributes" />
     <Content Include="OuterTools\FlatAdmin\assets\fancybox\CHANGELOG.txt" />
     <Content Include="OuterTools\FlatAdmin\assets\fancybox\demo\1_b.jpg" />
     <Content Include="OuterTools\FlatAdmin\assets\fancybox\demo\1_s.jpg" />
@@ -1437,6 +1441,7 @@
     <Content Include="OuterTools\FlatAdmin\assets\jquery-easy-pie-chart\img\easy-pie-chart.png" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-easy-pie-chart\jquery.easy-pie-chart.css" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-easy-pie-chart\jquery.easy-pie-chart.js" />
+    <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\.gitignore" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\cors\postmessage.html" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\cors\result.html" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\css\jquery.fileupload-ui-noscript.css" />
@@ -1466,10 +1471,12 @@
     <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\js\vendor\tmpl.min.js" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\gae-go\static\favicon.ico" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\gae-go\static\robots.txt" />
-    <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\gae-python\main.py" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\gae-python\static\favicon.ico" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\gae-python\static\robots.txt" />
+    <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\node\.gitignore" />
+    <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\node\public\files\thumbnail\.gitignore" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\node\server.js" />
+    <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\node\tmp\.gitignore" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\php\files\style-responsive.css" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\php\index.php" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\php\UploadHandler.php" />
@@ -1477,6 +1484,7 @@
     <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\test\test.js" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-knob\index.html" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-knob\js\jquery.knob.js" />
+    <Content Include="OuterTools\FlatAdmin\assets\jquery-multi-select\.gitignore" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-multi-select\css\multi-select.css" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-multi-select\img\switch.png" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-multi-select\img\switch_original.png" />
@@ -1528,6 +1536,7 @@
     <Content Include="OuterTools\FlatAdmin\assets\jquery-ui\jquery-ui-1.10.1.custom.min.js" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-ui\jquery-ui-1.10.2.custom.min.js" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-ui\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="OuterTools\FlatAdmin\assets\morris.js-0.4.3\.gitignore" />
     <Content Include="OuterTools\FlatAdmin\assets\morris.js-0.4.3\examples\area-as-line.html" />
     <Content Include="OuterTools\FlatAdmin\assets\morris.js-0.4.3\examples\area.html" />
     <Content Include="OuterTools\FlatAdmin\assets\morris.js-0.4.3\examples\bar-colors.html" />
@@ -1814,7 +1823,6 @@
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-datetimepicker\LICENSE" />
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-datetimepicker\README.md" />
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-datetimepicker\tests\README.md" />
-    <Content Include="OuterTools\FlatAdmin\assets\bootstrap-switch\.gitignore" />
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-switch\bower.json" />
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-switch\component.json" />
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-switch\composer.json" />
@@ -1824,10 +1832,8 @@
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-switch\static\less\bootstrap-switch.less" />
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-switch\static\less\deps\mixins.less" />
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-switch\static\less\deps\variables.less" />
-    <Content Include="OuterTools\FlatAdmin\assets\bootstrap-timepicker\.gitignore" />
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-timepicker\less\timepicker.less" />
     <Content Include="OuterTools\FlatAdmin\assets\bootstrap-timepicker\README.md" />
-    <Content Include="OuterTools\FlatAdmin\assets\chart-master\.gitignore" />
     <Content Include="OuterTools\FlatAdmin\assets\chart-master\component.json" />
     <Content Include="OuterTools\FlatAdmin\assets\chart-master\docs\prettify.less" />
     <Content Include="OuterTools\FlatAdmin\assets\chart-master\docs\styles.less" />
@@ -1844,7 +1850,6 @@
     <Content Include="OuterTools\FlatAdmin\assets\ckeditor\skins\moono\readme.md" />
     <Content Include="OuterTools\FlatAdmin\assets\dropzone\css\stylus\basic.styl" />
     <Content Include="OuterTools\FlatAdmin\assets\dropzone\css\stylus\dropzone.styl" />
-    <Content Include="OuterTools\FlatAdmin\assets\fancybox\.gitattributes" />
     <Content Include="OuterTools\FlatAdmin\assets\fancybox\CHANGELOG.md" />
     <Content Include="OuterTools\FlatAdmin\assets\fancybox\README.md" />
     <Content Include="OuterTools\FlatAdmin\assets\flot\examples\data-eu-gdp-growth-1.json" />
@@ -1885,7 +1890,6 @@
     <Content Include="OuterTools\FlatAdmin\assets\jquery-easy-pie-chart\jquery.easy-pie-chart.coffee" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-easy-pie-chart\Makefile" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-easy-pie-chart\Readme.md" />
-    <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\.gitignore" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\blueimp-file-upload.jquery.json" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\CONTRIBUTING.md" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\package.json" />
@@ -1893,19 +1897,15 @@
     <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\gae-go\app.yaml" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\gae-go\app\main.go" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\gae-python\app.yaml" />
-    <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\node\.gitignore" />
+    <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\gae-python\main.py" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\node\package.json" />
-    <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\node\public\files\thumbnail\.gitignore" />
-    <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\node\tmp\.gitignore" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\php\files\.htaccess" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-knob\README.md" />
-    <Content Include="OuterTools\FlatAdmin\assets\jquery-multi-select\.gitignore" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-multi-select\bower.json" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-multi-select\multi-select.jquery.json" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-multi-select\README.markdown" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-multi-select\test\lib\jasmine-1.2.0\MIT.LICENSE" />
     <Content Include="OuterTools\FlatAdmin\assets\jquery-tags-input\README.md" />
-    <Content Include="OuterTools\FlatAdmin\assets\morris.js-0.4.3\.gitignore" />
     <Content Include="OuterTools\FlatAdmin\assets\morris.js-0.4.3\.travis.yml" />
     <Content Include="OuterTools\FlatAdmin\assets\morris.js-0.4.3\component.json" />
     <Content Include="OuterTools\FlatAdmin\assets\morris.js-0.4.3\less\morris.core.less" />
@@ -1938,6 +1938,7 @@
     <Content Include="OuterTools\FlatAdmin\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="OuterTools\FlatAdmin\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="OuterTools\FlatAdmin\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Areas\Admin\Views\web.config" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -2019,6 +2020,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="AuthenticationClasses\AdminAuth.cs" />
     <Compile Include="AuthenticationClasses\MemberAuth.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -2054,6 +2056,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Models\" />
     <Folder Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\php\files\thumbnail\" />
   </ItemGroup>
