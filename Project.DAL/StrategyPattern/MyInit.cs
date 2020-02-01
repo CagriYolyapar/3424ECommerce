@@ -18,7 +18,7 @@ namespace Project.DAL.StrategyPattern
             ap.Password = "123";
             ap.Role = MODEL.Enums.UserRole.Admin;
             ap.IsActive = true;
-
+            ap.Email = "nightwhisper137@gmail.com";
             context.AppUsers.Add(ap);
             context.SaveChanges();
         }
