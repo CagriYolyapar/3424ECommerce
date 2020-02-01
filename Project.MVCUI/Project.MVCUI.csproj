@@ -2028,6 +2028,8 @@
     <Compile Include="Areas\Admin\Controllers\ShipperController.cs" />
     <Compile Include="AuthenticationClasses\AdminAuth.cs" />
     <Compile Include="AuthenticationClasses\MemberAuth.cs" />
+    <Compile Include="Controllers\Deneme2Controller.cs" />
+    <Compile Include="Controllers\DenemeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ShoppingController.cs" />
@@ -2070,6 +2072,8 @@
     <Folder Include="Areas\Admin\Views\Category\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\php\files\thumbnail\" />
+    <Folder Include="Views\Deneme2\" />
+    <Folder Include="Views\Deneme\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
