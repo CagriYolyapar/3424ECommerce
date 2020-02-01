@@ -43,5 +43,21 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Project.VIEWMODEL.dll" />
+    <Content Include="bin\Debug\Project.VIEWMODEL.pdb" />
+    <Content Include="obj\Debug\Project.VIEWMODEL.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Project.VIEWMODEL.dll" />
+    <Content Include="obj\Debug\Project.VIEWMODEL.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\Project.VIEWMODEL.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Release\Project.VIEWMODEL.csproj.CoreCompileInputs.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

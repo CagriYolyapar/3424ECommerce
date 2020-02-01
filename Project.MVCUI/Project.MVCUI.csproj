@@ -97,6 +97,55 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Project.BLL.dll" />
+    <Content Include="bin\Project.BLL.pdb" />
+    <Content Include="bin\Project.COMMON.dll" />
+    <Content Include="bin\Project.COMMON.pdb" />
+    <Content Include="bin\Project.DAL.dll" />
+    <Content Include="bin\Project.DAL.pdb" />
+    <Content Include="bin\Project.MAP.dll" />
+    <Content Include="bin\Project.MAP.pdb" />
+    <Content Include="bin\Project.MODEL.dll" />
+    <Content Include="bin\Project.MODEL.pdb" />
+    <Content Include="bin\Project.MVCUI.dll" />
+    <Content Include="bin\Project.MVCUI.pdb" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Helpers.xml" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Mvc.xml" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.Razor.xml" />
+    <Content Include="bin\System.Web.Webpages.Deployment.dll" />
+    <Content Include="bin\System.Web.Webpages.Deployment.xml" />
+    <Content Include="bin\System.Web.Webpages.dll" />
+    <Content Include="bin\System.Web.Webpages.Razor.dll" />
+    <Content Include="bin\System.Web.Webpages.Razor.xml" />
+    <Content Include="bin\System.Web.Webpages.xml" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -105,6 +154,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
+    <Content Include="obj\Debug\Project.MVCUI.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Project.MVCUI.dll" />
+    <Content Include="obj\Debug\Project.MVCUI.pdb" />
     <Content Include="OuterTools\FlatAdmin\404.html" />
     <Content Include="OuterTools\FlatAdmin\500.html" />
     <Content Include="OuterTools\FlatAdmin\advanced_form_components.html" />
@@ -1939,6 +1991,24 @@
     <Content Include="OuterTools\FlatAdmin\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="OuterTools\FlatAdmin\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\AdminArea\Views\web.config" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\Project.MVCUI.csproj.CopyComplete" />
+    <Content Include="obj\Debug\Project.MVCUI.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\Project.MVCUI.csprojAssemblyReference.cache" />
+    <Content Include="obj\Debug\Tsc.out" />
+    <Content Include="bin\Project.BLL.dll.config" />
+    <Content Include="bin\Project.DAL.dll.config" />
+    <Content Include="bin\Project.MAP.dll.config" />
+    <Content Include="bin\Project.MVCUI.dll.config" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -2020,12 +2090,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\AdminArea\AdminAreaAreaRegistration.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ShipperController.cs" />
     <Compile Include="AuthenticationClasses\AdminAuth.cs" />
     <Compile Include="AuthenticationClasses\MemberAuth.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ShoppingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2064,6 +2138,7 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Category\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\php\files\thumbnail\" />
   </ItemGroup>
   <ItemGroup>
