@@ -30,6 +30,7 @@ namespace Project.BLL.DesignPatterns.RepositoryPattern.BaseRep
         public void Add(T item)
         {
             db.Set<T>().Add(item);
+            Save();
         }
 
         public bool Any(Expression<Func<T, bool>> exp)
@@ -82,13 +83,13 @@ namespace Project.BLL.DesignPatterns.RepositoryPattern.BaseRep
 
         public object Select(Expression<Func<T, object>> exp)
         {
-            return db.Set<T>().Select(exp);
+            return db.Set<T>().Select(exp).ToList();
         }
 
         public void Update(T item)
         {
             T guncellenecek = Find(item.ID);
-            item.Status = MODEL.Enums.DataStatus.Updated;
+            item.Status = DataStatus.Updated;
             item.ModifiedDate = DateTime.Now;
             db.Entry(guncellenecek).CurrentValues.SetValues(item);
             Save();
