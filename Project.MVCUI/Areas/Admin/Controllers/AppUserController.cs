@@ -15,14 +15,16 @@ namespace Project.MVCUI.Areas.Admin.Controllers
 
         public AppUserController()
         {
-           aurep= new AppUserRepository();
+            aurep = new AppUserRepository();
         }
-            
+
         // GET: Admin/AppUser
         public ActionResult Index()
         {
             return View(aurep.GetAll());
         }
+
+
         public ActionResult AddAppUser()
         {
             return View();
@@ -32,7 +34,25 @@ namespace Project.MVCUI.Areas.Admin.Controllers
         public ActionResult AddAppUser(AppUser appUser)
         {
             aurep.Add(appUser);
-            return RedirectToAction("UserList", "User");
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult UpdateAppUser(int id)
+        {
+            return view(aurep.Find(id));
+        }
+
+        [HttpPost]
+        public ActionResult UpdateAppUser(AppUser appUser)
+        {
+            aurep.Update(appUser);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult DeleteAppUser(int id)
+        {
+            aurep.Delete(aurep.Find(id));
+            return RedirectToAction("Index");
         }
     }
 }
