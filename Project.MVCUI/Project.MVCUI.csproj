@@ -2033,6 +2033,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AppUserController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\EntityAttributeController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\Controllers\ShipperController.cs" />
     <Compile Include="AuthenticationClasses\AdminAuth.cs" />
@@ -2085,6 +2086,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Category\" />
+    <Folder Include="Areas\Admin\Views\EntityAttribute\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Areas\Admin\Views\Shipper\" />
     <Folder Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\php\files\thumbnail\" />
