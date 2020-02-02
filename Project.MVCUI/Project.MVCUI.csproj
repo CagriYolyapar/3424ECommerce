@@ -2041,6 +2041,7 @@
     <Compile Include="Controllers\DenemeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ShoppingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2089,6 +2090,7 @@
     <Folder Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\php\files\thumbnail\" />
     <Folder Include="Views\Deneme2\" />
     <Folder Include="Views\Deneme\" />
+    <Folder Include="Views\Shopping\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
