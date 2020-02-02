@@ -2037,6 +2037,7 @@
     <Compile Include="Areas\Admin\Controllers\ShipperController.cs" />
     <Compile Include="AuthenticationClasses\AdminAuth.cs" />
     <Compile Include="AuthenticationClasses\MemberAuth.cs" />
+    <Compile Include="Controllers\Deneme2Controller.cs" />
     <Compile Include="Controllers\DenemeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
