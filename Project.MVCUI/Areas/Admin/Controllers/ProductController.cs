@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace Project.MVCUI.Areas.Admin.Controllers
 {
-    [AdminAuth]
+    //[AdminAuth]
     public class ProductController : Controller
     {
         ProductRepository prep;
