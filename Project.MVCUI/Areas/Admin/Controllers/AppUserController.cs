@@ -39,7 +39,7 @@ namespace Project.MVCUI.Areas.Admin.Controllers
 
         public ActionResult UpdateAppUser(int id)
         {
-            return view(aurep.Find(id));
+            return View(aurep.Find(id));
         }
 
         [HttpPost]
