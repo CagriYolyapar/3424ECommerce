@@ -1,0 +1,39 @@
+﻿@model Shipper
+@{
+    ViewBag.Title = "AddShipper";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm("AddShipper","Shipper",FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Nakliye Şirketi Ekleme Sayfası
+                </header>
+                <div class="panel-body">
+                    <form role="form" class="form-horizontal tasi-form">
+                        <div class="form-group has-success">
+                            <label class="col-lg-2 control-label">Şirket İsmi</label>
+                            <div class="col-lg-10">
+                                @Html.TextBoxFor(x => x.CompanyName, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group has-success">
+                            <label class="col-lg-2 control-label">Şirket Telefonu</label>
+                            <div class="col-lg-10">
+                                @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                                <button class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+}
+
