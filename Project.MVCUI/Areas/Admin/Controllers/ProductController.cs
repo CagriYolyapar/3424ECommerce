@@ -28,7 +28,7 @@ namespace Project.MVCUI.Areas.Admin.Controllers
         public ActionResult AddProduct()
         {
             ViewBag.Kategoriler = crep.GetAll();
-            return RedirectToAction("ProductList");
+            return View();
 
         }
 
