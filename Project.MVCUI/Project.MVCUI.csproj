@@ -1942,6 +1942,9 @@
     <Content Include="Areas\Admin\Views\Product\ProductList.cshtml" />
     <Content Include="Areas\Admin\Views\Product\AddProduct.cshtml" />
     <Content Include="Areas\Admin\Views\Product\UpdateProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\CategoryList.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\AddCategory.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\UpdateCategory.cshtml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -2077,7 +2080,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\AppUserDetail\" />
-    <Folder Include="Areas\Admin\Views\Category\" />
     <Folder Include="Areas\Admin\Views\EntityAttribute\" />
     <Folder Include="Areas\Admin\Views\ProductAttribute\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
