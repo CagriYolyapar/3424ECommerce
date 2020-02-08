@@ -1947,6 +1947,7 @@
     <Content Include="obj\Debug\Project.MVCUI.csprojAssemblyReference.cache" />
     <Content Include="obj\Debug\Tsc.out" />
     <Content Include="Areas\Admin\Views\Product\AddProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\UpdateProduct.cshtml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
