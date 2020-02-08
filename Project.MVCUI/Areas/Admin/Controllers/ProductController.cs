@@ -46,9 +46,9 @@ namespace Project.MVCUI.Areas.Admin.Controllers
             return RedirectToAction("ProductList");
         }
 
-        public ActionResult UpdateProduct()
+        public ActionResult UpdateProduct(int id)
         {
-            return View();
+            return View(prep.Find(id));
         }
 
         [HttpPost]
