@@ -43,9 +43,9 @@ namespace Project.MVCUI.Areas.Admin.Controllers
             return RedirectToAction("EntityAttributeList");
         }
 
-        public ActionResult UpdateEntityAttribute()
+        public ActionResult UpdateEntityAttribute(int id)
         {
-            return View();
+            return View(eaRep.Find(id));
         }
 
         [HttpPost]
