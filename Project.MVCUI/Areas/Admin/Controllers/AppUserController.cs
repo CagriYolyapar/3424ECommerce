@@ -1,4 +1,5 @@
 ﻿using Project.BLL.DesignPatterns.RepositoryPattern.ConcRep;
+using Project.COMMON.PasswordEncryption;
 using Project.MODEL.Entities;
 using System;
 using System.Collections.Generic;
@@ -33,6 +34,7 @@ namespace Project.MVCUI.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult AddAppUser(AppUser appUser)
         {
+            appUser.Password = PasswordEncryption.EncryptPassword(appUser.Password,3);
             aurep.Add(appUser);
             return RedirectToAction("Index");
         }
