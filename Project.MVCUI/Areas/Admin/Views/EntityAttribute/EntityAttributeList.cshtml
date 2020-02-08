@@ -1,0 +1,47 @@
+﻿@model List<EntityAttribute>
+@{
+    ViewBag.Title = "EntityAttributeList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="panel">
+    <header class="panel-heading">
+        Özellik Eklemek icin lütfen @Html.ActionLink("Tıklayınız", "AddEntityAttribute")
+    </header>
+    <div class="panel-body">
+        <div class="adv-table">
+            <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
+                <thead>
+                    <tr>
+                        <th>Özellik İsmi</th>
+                        <th>Açıklama</th>
+                        <th>Statü</th>
+                        <th class="hidden-phone"> Sil</th>
+                        <th class="hidden-phone">Güncelle</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (EntityAttribute item in Model)
+                    {
+                        <tr class="gradeX">
+                            <td>@item.AttributeName</td>
+                            <td>
+                                @item.Description
+                            </td>            
+                            <td>@item.Status</td>
+                           
+                            <td class="center hidden-phone">@Html.ActionLink("Sil", "DeleteEntityAttribute", new { id = item.ID }, new { @class = "btn btn-danger" })</td>
+                            <td class="center hidden-phone"> @Html.ActionLink("Güncelle", "UpdateEntityAttribute", new { id = item.ID }, new { @class = "btn btn-warning" })  </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+

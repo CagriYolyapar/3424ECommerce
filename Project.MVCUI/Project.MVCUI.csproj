@@ -1948,6 +1948,9 @@
     <Content Include="obj\Debug\Tsc.out" />
     <Content Include="Areas\Admin\Views\Product\AddProduct.cshtml" />
     <Content Include="Areas\Admin\Views\Product\UpdateProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\EntityAttribute\EntityAttributeList.cshtml" />
+    <Content Include="Areas\Admin\Views\EntityAttribute\AddEntityAttribute.cshtml" />
+    <Content Include="Areas\Admin\Views\EntityAttribute\UpdateEntityAttribute.cshtml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -2084,7 +2087,6 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\AppUserDetail\" />
     <Folder Include="Areas\Admin\Views\Category\" />
-    <Folder Include="Areas\Admin\Views\EntityAttribute\" />
     <Folder Include="Areas\Admin\Views\ProductAttribute\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Areas\Admin\Views\Shipper\" />
