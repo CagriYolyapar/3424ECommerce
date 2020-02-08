@@ -48,6 +48,7 @@ namespace Project.MVCUI.Areas.Admin.Controllers
 
         public ActionResult UpdateProduct(int id)
         {
+            ViewBag.Kategoriler = crep.GetActives();
             return View(prep.Find(id));
         }
 
