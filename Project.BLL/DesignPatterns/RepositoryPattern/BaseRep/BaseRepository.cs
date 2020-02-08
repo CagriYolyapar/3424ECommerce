@@ -24,7 +24,15 @@ namespace Project.BLL.DesignPatterns.RepositoryPattern.BaseRep
 
         void Save()
         {
-            db.SaveChanges();
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            
         }
 
         public void Add(T item)
