@@ -1957,6 +1957,7 @@
     <Content Include="Areas\Admin\Views\AppUserDetail\UserDetailList.cshtml" />
     <Content Include="Areas\Admin\Views\AppUserDetail\AddUserDetail.cshtml" />
     <Content Include="Areas\Admin\Views\AppUserDetail\UpdateUserDetail.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductAttribute\ProductAttributeList.cshtml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -2091,10 +2092,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Admin\Views\AppUserDetail\" />
-    <Folder Include="Areas\Admin\Views\EntityAttribute\" />
-    <Folder Include="Areas\Admin\Views\Category\" />
-    <Folder Include="Areas\Admin\Views\ProductAttribute\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\php\files\thumbnail\" />
     <Folder Include="Views\Deneme2\" />

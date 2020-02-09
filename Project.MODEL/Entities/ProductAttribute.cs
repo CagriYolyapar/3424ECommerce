@@ -12,6 +12,8 @@ namespace Project.MODEL.Entities
 
         public int ProductID { get; set; }
 
+        public string Value { get; set; }
+
         //Relational Properties
 
         public virtual EntityAttribute Attribute { get; set; }

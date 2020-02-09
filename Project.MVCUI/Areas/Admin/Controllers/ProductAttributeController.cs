@@ -16,9 +16,9 @@ namespace Project.MVCUI.Areas.Admin.Controllers
             paRep = new ProductAttributeRepository();
         }
         // GET: Admin/ProductAttribute
-        public ActionResult ProductAttributeList()
+        public ActionResult ProductAttributeList(int id)
         {
-            return View(paRep.GetAll());
+            return View(paRep.Find(id));
         }
 
         public ActionResult ProductAttributeAdd()
