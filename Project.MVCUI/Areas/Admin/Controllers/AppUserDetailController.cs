@@ -12,43 +12,51 @@ namespace Project.MVCUI.Areas.Admin.Controllers
     [AdminAuth]
     public class AppUserDetailController : Controller
     {
-        AppUserDetailRepository auRep;
+        AppUserDetailRepository audRep;
+        AppUserRepository auRep;
         public AppUserDetailController()
         {
-            auRep = new AppUserDetailRepository();
+            audRep = new AppUserDetailRepository();
+            auRep = new AppUserRepository();
         }
         // GET: Admin/AppUserDetail
         public ActionResult UserDetailList()
         {
-            return View(auRep.GetAll());
+            return View(audRep.GetAll());
         }
         public ActionResult UserDetailByID(int id)
         {
-            return View(auRep.Find(id));
+            return View(audRep.Find(id));
         }
         public ActionResult AddUserDetail()
         {
+            ViewBag.Kullanicilar = auRep.GetAll();
             return View();
         }
         [HttpPost]
-        public ActionResult AddUserDetail(AppUserDetail userDetail)
+        public ActionResult AddUserDetail(AppUserDetail userDetail, string userID)
         {
-            auRep.Add(userDetail);
+            AppUser user = auRep.Find(Convert.ToInt32(userID));
+            userDetail.AppUser = user;
+            audRep.Add(userDetail);
             return RedirectToAction("UserDetailList");
         }
         public ActionResult UpdateUserDetail(int id)
         {
-            return View(auRep.Find(id));
+            ViewBag.Kullanicilar = auRep.GetAll();
+            return View(audRep.Find(id));
         }
         [HttpPost]
-        public ActionResult UpdateUserDetail(AppUserDetail userDetail)
+        public ActionResult UpdateUserDetail(AppUserDetail userDetail, string userID)
         {
-            auRep.Update(userDetail);
+            AppUser user = auRep.Find(Convert.ToInt32(userID));
+            userDetail.AppUser = user;
+            audRep.Update(userDetail);
             return RedirectToAction("UserDetailList");
         }
         public ActionResult DeleteUserDetail(int id)
         {
-            auRep.Delete(auRep.Find(id));
+            audRep.Delete(audRep.Find(id));
             return RedirectToAction("UserDetailList");
         }
     }

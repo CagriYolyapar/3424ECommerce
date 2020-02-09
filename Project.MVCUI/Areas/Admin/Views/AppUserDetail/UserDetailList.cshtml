@@ -1,0 +1,44 @@
+﻿@model List<AppUserDetail>
+@{
+    ViewBag.Title = "UserDetailList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section class="panel">
+    <header class="panel-heading">
+        Kullanıcı Eklemek icin lütfen @Html.ActionLink("Tıklayınız", "AddUserDetail")
+    </header>
+    <div class="panel-body">
+        <div class="adv-table">
+            <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
+                <thead>
+                    <tr>
+                        <th>Ad</th>
+                        <th>Soyad</th>
+                        <th>Kullanıcı Adı</th>
+                        <th>Status</th>
+                        <th>Güncelle</th>
+                        <th>Sil</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (AppUserDetail userDetail in Model)
+                    {
+                    <tr class="gradeX">
+                        <td>@userDetail.FirstName</td>
+                        <td>@userDetail.LastName</td>
+                        <td class="hidden-phone">@userDetail.AppUser.UserName</td>
+                        <td>@userDetail.Status</td>
+                        <td class="center hidden-phone">@Html.ActionLink("Sil", "DeleteUserDetail", new { id = userDetail.ID }, new { @class = "btn btn-danger" })</td>
+                        <td class="center hidden-phone"> @Html.ActionLink("Güncelle", "UpdateUserDetail", new { id = userDetail.ID }, new { @class = "btn btn-warning" })  </td>
+                    </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+

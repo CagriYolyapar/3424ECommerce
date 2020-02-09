@@ -1954,6 +1954,9 @@
     <Content Include="Areas\Admin\Views\EntityAttribute\EntityAttributeList.cshtml" />
     <Content Include="Areas\Admin\Views\EntityAttribute\AddEntityAttribute.cshtml" />
     <Content Include="Areas\Admin\Views\EntityAttribute\UpdateEntityAttribute.cshtml" />
+    <Content Include="Areas\Admin\Views\AppUserDetail\UserDetailList.cshtml" />
+    <Content Include="Areas\Admin\Views\AppUserDetail\AddUserDetail.cshtml" />
+    <Content Include="Areas\Admin\Views\AppUserDetail\UpdateUserDetail.cshtml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
