@@ -10,27 +10,83 @@ namespace Project.MVCUI.Areas.Admin.Controllers
 {
     public class ProductAttributeController : Controller
     {
+
+        //Cagri:Hata sayfası result filter
+        //Cagri:Sipariş Modülü
+        //İlker:Kullanıcı register işlemleri mail gonderme
+        //Cagri:Muadil ürün
+        //Cagri: Ürün Resim yükleme
+        //Cagri:Caching mevzuları
+        //Cagri:Partial View
+        //Cagri:Action Filter Loglamalar
+        //İlker: Yorumlar
+        
+
+
+        EntityAttributeRepository eaRep;
         ProductAttributeRepository paRep;
+
+        ProductRepository pRep;
+
+        public ActionResult ProductDetail(int id)
+        {
+            return View(paRep.Where(x=>x.ProductID==id));
+
+        }
+
+
         public ProductAttributeController()
         {
+            pRep = new ProductRepository();
+            eaRep = new EntityAttributeRepository();
             paRep = new ProductAttributeRepository();
         }
         // GET: Admin/ProductAttribute
         public ActionResult ProductAttributeList(int id)
         {
-            return View(paRep.Find(id));
+            return View(pRep.Find(id));
         }
 
-        public ActionResult ProductAttributeAdd()
+        public ActionResult ProductAttributeAdd(int id)
         {
-            return View();
+            ViewBag.AttributeList = eaRep.GetAll();
+            return View(pRep.Find(id));
         }
 
         [HttpPost]
-        public ActionResult ProductAttributeAdd(ProductAttribute item)
+        public ActionResult ProductAttributeAdd(ProductAttribute item,FormCollection collection)
         {
-            paRep.Add(item);
-            return RedirectToAction("ProductAttributeList");
+
+            foreach (string element in collection.GetValues("checkbox"))
+            {
+                int id = Convert.ToInt32(element);
+                ProductAttribute pa = new ProductAttribute();
+                pa.ProductID = item.ID;
+                pa.AttributeID = id;
+                paRep.Add(pa);
+            }
+
+            
+            return RedirectToAction("ProductAttributeList",new { id=item.ID});
+        }
+
+        [HttpPost]
+        public ActionResult ProductAttributeValue(int id,FormCollection collection)
+        {
+            List<ProductAttribute> currentData = paRep.Where(x => x.ProductID == id);
+            int indexer = 0;
+
+            foreach (ProductAttribute element in currentData)
+            {
+                element.Value = collection.GetValues("valueName")[indexer];
+                indexer++;
+                paRep.Update(element);
+            }
+
+            return RedirectToAction("ProductDetail", new { id = id });
+
+
+          
         }
 
         public ActionResult DeleteProductAttribute(int id)

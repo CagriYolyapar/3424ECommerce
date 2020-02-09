@@ -14,7 +14,7 @@ namespace Project.BLL.DesignPatterns.RepositoryPattern.BaseRep
 {
     public abstract class BaseRepository<T>: IRepository<T> where T : BaseEntity
     {
-        MyContext db;
+       protected MyContext db;
 
         public BaseRepository()
         {
@@ -22,7 +22,7 @@ namespace Project.BLL.DesignPatterns.RepositoryPattern.BaseRep
             db = DBTool.DBInstance;
         }
 
-        void Save()
+       protected  void Save()
         {
             try
             {
@@ -94,7 +94,7 @@ namespace Project.BLL.DesignPatterns.RepositoryPattern.BaseRep
             return db.Set<T>().Select(exp).ToList();
         }
 
-        public void Update(T item)
+        public virtual void Update(T item)
         {
             T guncellenecek = Find(item.ID);
             item.Status = DataStatus.Updated;

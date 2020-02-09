@@ -1958,6 +1958,8 @@
     <Content Include="Areas\Admin\Views\AppUserDetail\AddUserDetail.cshtml" />
     <Content Include="Areas\Admin\Views\AppUserDetail\UpdateUserDetail.cshtml" />
     <Content Include="Areas\Admin\Views\ProductAttribute\ProductAttributeList.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductAttribute\ProductAttributeAdd.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductAttribute\ProductDetail.cshtml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
