@@ -2060,10 +2060,12 @@
     <Compile Include="Areas\Admin\Controllers\ShipperController.cs" />
     <Compile Include="AuthenticationClasses\AdminAuth.cs" />
     <Compile Include="AuthenticationClasses\MemberAuth.cs" />
+    <Compile Include="Controllers\ConfirmationController.cs" />
     <Compile Include="Controllers\Deneme2Controller.cs" />
     <Compile Include="Controllers\DenemeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\ShoppingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -2092,6 +2094,8 @@
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Shopping\ShoppingList.cshtml" />
+    <Content Include="Views\Register\Register.cshtml" />
+    <Content Include="Views\Confirmation\ConfirmEMail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
