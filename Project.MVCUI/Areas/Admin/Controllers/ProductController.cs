@@ -1,4 +1,5 @@
 ﻿using Project.BLL.DesignPatterns.RepositoryPattern.ConcRep;
+using Project.COMMON.ImageUploader;
 using Project.MODEL.Entities;
 using Project.MVCUI.AuthenticationClasses;
 using System;
@@ -33,8 +34,9 @@ namespace Project.MVCUI.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddProduct(Product item)
+        public ActionResult AddProduct(Product item,HttpPostedFileBase resim)
         {
+            item.ImagePath = ImageUploader.UploadImage("~/Pictures/",resim);
             prep.Add(item);
             return RedirectToAction("ProductList");
         }

@@ -31,6 +31,9 @@ namespace Project.MODEL.Entities
         {
             ActivationCode = Guid.NewGuid();
             Role = UserRole.Member;
+            IsActive = true;
+            IsBanned = false;
+            Point = 0;
         }
 
 

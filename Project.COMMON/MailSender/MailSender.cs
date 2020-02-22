@@ -10,19 +10,19 @@ namespace Project.COMMON.MailSender
 {
     public static class MailSender
     {
-        public static void Send(string receiver, string password="", string body="",string subject="",string sender="")
+        public static void Send(string receiver, string password = "34243424", string body = "Test Mesajıdır", string subject = "E-Mail Testi", string sender = "yms34243423@gmail.com")
         {
             MailAddress senderEmail = new MailAddress(sender);
+            
             MailAddress receiverEmail = new MailAddress(receiver);
             SmtpClient smtp = new SmtpClient
             {
-                Host = "",
-                Port=587,
-                EnableSsl=true,
-                DeliveryMethod=SmtpDeliveryMethod.Network,
-                UseDefaultCredentials=false,
-                Credentials=new NetworkCredential(senderEmail.Address,password)
-
+                Host = "smtp.gmail.com",
+                Port = 587,
+                EnableSsl = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(senderEmail.Address, password)
             };
             using (MailMessage message = new MailMessage(senderEmail, receiverEmail)
             {

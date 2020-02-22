@@ -18,6 +18,7 @@
                         <th class="hidden-phone">Ürün Kategorisi</th>
                         <th class="hidden-phone">Ürün Stok</th>
                         <th class="hidden-phone">Durum</th>
+                        <th class="hidden-phone">Resmi</th>
                         <th class="hidden-phone"> Sil</th>
                         <th class="hidden-phone">Güncelle</th>
 
@@ -44,6 +45,7 @@
 
                         <td class="center hidden-phone">@item.UnitsInStock</td>
                         <td class="center hidden-phone">  @item.Status</td>
+                        <td class="center hidden-phone"> <img style="width:30px;height:30px" src="@item.ImagePath" />  </td>
                         <td class="center hidden-phone">@Html.ActionLink("Sil", "DeleteProduct", new { id = item.ID }, new { @class = "btn btn-danger" })</td>
                         <td class="center hidden-phone" > @Html.ActionLink("Güncelle", "UpdateProduct", new { id = item.ID }, new { @class = "btn btn-warning" })  </td>
                     </tr>
