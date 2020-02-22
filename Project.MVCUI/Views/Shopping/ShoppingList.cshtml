@@ -3,6 +3,12 @@
 @model PAVM
 
 
+@section Sepet{
+
+    <li><a href="@Url.Action("CartPage","Shopping")"><i class="icon-shopping-cart"></i> Cart</a></li>
+}
+
+<span style="color:red">@TempData["sepetBos"]</span>
 
 @{
     ViewBag.Title = "ShoppingList";
@@ -94,11 +100,11 @@
     <div class="col-md-9">
         <section class="panel">
             <div class="panel-body">
-           
-              
+
+
                 <div class="pull-right">
                     <ul class="pagination pagination-sm pro-page-list">
-                      @Html.PagedListPager(Model.PagedProduct,page=> Url.Action("ShoppingList",new { page }))
+                        @Html.PagedListPager(Model.PagedProduct, page => Url.Action("ShoppingList", new { page }))
                     </ul>
                 </div>
             </div>
@@ -124,7 +130,7 @@
                         <div class="panel-body text-center">
                             <h4>
                                 <a href="#" class="pro-title">
-                                    @item.ProductName.Substring(0,3) ...
+                                    @item.ProductName.Substring(0, 3) ...
                                 </a>
                             </h4>
                             <p class="price">$@item.UnitPrice</p>

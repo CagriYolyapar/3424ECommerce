@@ -14,6 +14,15 @@ namespace Project.MVCUI.Models
             _sepetim = new Dictionary<int, CartItem>();
         }
 
+        public List<CartItem> Sepetim
+        {
+            get
+            {
+                return _sepetim.Values.ToList();
+            }
+        }
+
+
         public void SepeteEkle(CartItem item)
         {
             if (_sepetim.ContainsKey(item.ID))
