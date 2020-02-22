@@ -1,0 +1,65 @@
+﻿@model AppUser
+@{
+    ViewBag.Title = "Register";
+}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>FlatLab - Flat & Responsive Bootstrap Admin Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="login-body">
+
+    <div class="container">
+
+        @using (Html.BeginForm("CreateUser", "Register", FormMethod.Post, new { @class = "form-signin"}))
+        {
+        <div class="login-wrap">
+            @Html.TextBoxFor(x => x.UserName, new { @class = "form-control", @type = "text", placeholder = "User Name", autofocus = "true" })
+            @Html.TextBoxFor(x => x.Email, new { @class = "form-control", @type = "text", placeholder = "E-Mail" })
+            @Html.TextBoxFor(x => x.Password, new { @class = "form-control", @type = "password", placeholder = "Password", id = "password" })
+            @Html.TextBoxFor(x => x.Password, new { @class = "form-control", @type = "password", placeholder = "Re-type Password", id = "confirm_password" })
+            <button class="btn btn-lg btn-login btn-block" type="submit">Submit</button>
+        </div>
+        }
+
+    </div>
+</body>
+
+<script>
+    var password = document.getElementById("password"), 
+        confirm_password = document.getElementById("confirm_password");
+
+    function validatePassword(){
+      if(password.value != confirm_password.value) {
+        confirm_password.setCustomValidity("Passwords Don't Match");
+      } else {
+        confirm_password.setCustomValidity('');
+      }
+    }
+
+    password.onchange = validatePassword;
+    confirm_password.onkeyup = validatePassword;
+</script>
+
