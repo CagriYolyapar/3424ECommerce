@@ -95,7 +95,7 @@
         <section class="panel">
             <div class="panel-body">
            
-                @*  Burada ozel pagination yapılacak  *@
+              
                 <div class="pull-right">
                     <ul class="pagination pagination-sm pro-page-list">
                       @Html.PagedListPager(Model.PagedProduct,page=> Url.Action("ShoppingList",new { page }))
@@ -117,7 +117,7 @@
 
 
                             <img src="@item.ImagePath" alt="Resim yok" title="@item.ProductName" />
-                            <a href="#" class="adtocart">
+                            <a href="@Url.Action("AddToCart",new { id=item.ID})" class="adtocart">
                                 <i class="icon-shopping-cart"></i>
                             </a>
                         </div>

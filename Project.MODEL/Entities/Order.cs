@@ -17,7 +17,7 @@ namespace Project.MODEL.Entities
 
 
 
-        //Umut => Bize güzel bir PaymentVM sınıfı yaratacak (kredi kartı numarası , son kullanım tarihi ( Ay , yıl ), Limit, CVV Numarası) (BU farklı bir WebApi projesinde olsun dısarıya acılsın)..Deadline => (Salı 28.01.2020 )
+      
 
         //Relational Properties
 

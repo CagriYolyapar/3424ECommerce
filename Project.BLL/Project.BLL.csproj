@@ -57,12 +57,14 @@
     <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\CategoryRepository.cs" />
     <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\CommentRepository.cs" />
     <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\EntityAttributeRepository.cs" />
+    <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\LogRepository.cs" />
     <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\OrderDetailRepository.cs" />
     <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\OrderRepository.cs" />
     <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\ProductAttributeRepository.cs" />
     <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\ProductRepository.cs" />
     <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\ShipperRepository.cs" />
     <Compile Include="DesignPatterns\RepositoryPattern\IntRep\IRepository.cs" />
+    <Compile Include="DesignPatterns\SingletonPattern\DBLogTool.cs" />
     <Compile Include="DesignPatterns\SingletonPattern\DBTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -11,14 +11,14 @@ namespace Project.MVCUI.Areas.Admin.Controllers
     public class ProductAttributeController : Controller
     {
 
-        //Cagri:Hata sayfası result filter
+        
         //Cagri:Sipariş Modülü
-        //İlker:Kullanıcı register işlemleri mail gonderme
+       
         //Cagri:Muadil ürün
-        //Cagri: Ürün Resim yükleme
+        
         //Cagri:Caching mevzuları
         //Cagri:Partial View
-        //Cagri:Action Filter Loglamalar
+    
         //İlker: Yorumlar
         
 

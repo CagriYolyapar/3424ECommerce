@@ -9,7 +9,7 @@ namespace Project.MAP.Options
 {
     public class AppUserMap:BaseMap<AppUser>
     {
-        //Turgut:Map'de Türkce'lestirme ayarları
+     
         public AppUserMap()
         {
             ToTable("Kullanıcılar");

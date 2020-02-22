@@ -54,6 +54,7 @@
     <Compile Include="Entities\Shipper.cs" />
     <Compile Include="Enums\DataStatus.cs" />
     <Compile Include="Enums\UserRole.cs" />
+    <Compile Include="LogEntity\Log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
