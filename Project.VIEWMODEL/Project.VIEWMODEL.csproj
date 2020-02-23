@@ -48,7 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\OrderVM.cs" />
     <Compile Include="ViewModels\PAVM.cs" />
+    <Compile Include="ViewModels\PaymentVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\Project.VIEWMODEL.dll" />

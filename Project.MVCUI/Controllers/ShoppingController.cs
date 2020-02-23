@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
 using PagedList;
 using Project.BLL.DesignPatterns.RepositoryPattern.ConcRep;
 using Project.BLL.DesignPatterns.SingletonPattern;
+using Project.COMMON.MailSender;
 using Project.MODEL.Entities;
 using Project.MVCUI.Filters;
 using Project.MVCUI.Models;
@@ -16,11 +18,15 @@ namespace Project.MVCUI.Controllers
     [ActFilter]
     public class ShoppingController : Controller
     {
+        OrderRepository oRep;
         ProductRepository pRep;
         CategoryRepository cRep;
+        OrderDetailRepository odRep;
 
         public ShoppingController()
         {
+            odRep = new OrderDetailRepository();
+            oRep = new OrderRepository();
             pRep = new ProductRepository();
             cRep = new CategoryRepository();
         }
@@ -37,15 +43,7 @@ namespace Project.MVCUI.Controllers
 
         public ActionResult AddToCart(int id)
         {
-            AppUser user;
-            if (Session["member"] == null)
-                TempData["anonimKullanici"] = "Anonim kullanıcı";
 
-
-            else
-            {
-                user = Session["member"] as AppUser;
-            }
 
             Cart c = Session["scart"] == null ? new Cart() : Session["scart"] as Cart;
 
@@ -88,7 +86,7 @@ namespace Project.MVCUI.Controllers
                 Cart c = Session["scart"] as Cart;
                 c.SepettenSil(id);
 
-                if (c.Sepetim.Count ==0)
+                if (c.Sepetim.Count == 0)
                 {
                     Session.Remove("scart");
                     TempData["sepetBos"] = "Sepetinizde ürün bulunmamaktadır";
@@ -96,10 +94,112 @@ namespace Project.MVCUI.Controllers
                 }
 
                 return RedirectToAction("CartPage");
-                    
+
             }
             return RedirectToAction("ShoppingList");
         }
+
+        //http://localhost:49606/api/Payment/GetAll
+
+
+        public ActionResult SiparisiOnayla()
+        {
+            AppUser mevcutKullanici;
+
+            if (Session["member"] != null)
+            {
+                mevcutKullanici = Session["member"] as AppUser;
+
+            }
+            else
+            {
+                TempData["anonim"] = "Kullanıcı üye degil";
+            }
+
+
+
+            return View();
+        }
+
+        [HttpPost]
+
+        public ActionResult SiparisiOnayla(OrderVM ovm)
+        {
+            //Burada artık bir client olarak API'a istek göndermemiz gerekir..(Api consume)..Bunun icin  WebApiClient package'ini Nuget'tan indirmeniz gerekir. Eger dogru kütüphaneyi indirip indirmediginiz görmek istiyorsanız HttpClient sınıfının gelip gelmedigine bakın...
+
+            //Bir Api consume etme sürecinde actıgımız degişkenleri veya nesneleri veya sürecleri ram'de cok uzun süre tutmamalıyız...
+
+            bool result;
+
+            using (HttpClient client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://localhost:49606/api/");
+
+                var postTask = client.PostAsJsonAsync("Payment/ReceivePayment", ovm.PaymentVM);
+                //BUrada PAymentVM nesnesi Json olarak Asymc bicimde gönderilir. 
+
+                var sonuc = postTask.Result;
+
+                if (sonuc.IsSuccessStatusCode)
+                {
+                    result = true;
+
+                }
+                else
+                {
+                    result = false;
+                }
+
+
+            }
+
+
+            if (result)
+            {
+                ovm.Order.ShipperID = 1;
+                
+
+                if (Session["member"] != null)
+                {
+                    AppUser kullanici = Session["member"] as AppUser;
+                    ovm.Order.AppUserID = kullanici.ID;
+                    ovm.Order.UserName = kullanici.UserName;
+                }
+                else
+                {
+                    string userName = TempData["anonim"].ToString();
+                    ovm.Order.AppUserID = null;
+                    ovm.Order.UserName = "Kayıtlı olmayan kullanıcı";
+                }
+
+                Cart sepet = Session["scart"] as Cart;
+                ovm.Order.TotalPrice = sepet.TotalPrice.Value;
+                oRep.Add(ovm.Order); //tam bu noktada ilgili Order'imiz kaydedildiginde Order'imizin ID'si olusacak..
+               
+
+                foreach (CartItem item in sepet.Sepetim)
+                {
+                    OrderDetail od = new OrderDetail();
+                    od.OrderID = ovm.Order.ID;
+                    od.ProductID = item.ID;
+                    od.TotalPrice = item.SubTotal;
+                    od.Quantity = item.Amount;
+                    odRep.Add(od);
+                }
+                TempData["odeme"] = "Siparişiniz bize ulasmıstır...Tesekkür ederiz";
+                MailSender.Send(ovm.Order.Email, body: $"Siparisiniz basarıyla alındı.{ovm.Order.TotalPrice}");
+                return RedirectToAction("ShoppingList");
+
+            }
+            else
+            {
+                TempData["sorun"] = "Odeme ile ilgili bir sorun olustu. Lütfen bankanızla iletişime geciniz";
+                return RedirectToAction("ShoppingList");
+            }
+         
+        }
+
+
 
 
 

@@ -4,6 +4,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<div class="jumbotron">
+    Ödemeniz gereken toplam tutar => @Model.TotalPrice... Siparişi onaylamak icin lütfen @Html.ActionLink("Tıklayınız","SiparisiOnayla")
+</div>
+
+
+
 <div class="row product-list">
 
     @foreach (CartItem item in Model.Sepetim)

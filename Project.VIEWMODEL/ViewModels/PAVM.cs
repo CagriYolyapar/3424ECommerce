@@ -18,7 +18,7 @@ namespace Project.VIEWMODEL.ViewModels
 
         public List<Category> Categories { get; set; }
 
-        public IPagedList<Product> PagedProduct { get; set; }
+        public IPagedList<Product> PagedProduct { get; set; } //sayfalama(Pagination) icin tutulan Property'dir...
 
     }
 }

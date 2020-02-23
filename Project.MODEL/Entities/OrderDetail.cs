@@ -12,6 +12,9 @@ namespace Project.MODEL.Entities
 
         public int ProductID { get; set; }
 
+        public decimal TotalPrice { get; set; }
+
+        public short Quantity { get; set; }
         //Relational Properties
 
         public virtual Product Product { get; set; }

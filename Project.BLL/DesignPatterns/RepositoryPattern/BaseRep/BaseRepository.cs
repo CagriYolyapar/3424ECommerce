@@ -12,9 +12,9 @@ using System.Threading.Tasks;
 
 namespace Project.BLL.DesignPatterns.RepositoryPattern.BaseRep
 {
-    public abstract class BaseRepository<T>: IRepository<T> where T : BaseEntity
+    public abstract class BaseRepository<T> : IRepository<T> where T : BaseEntity
     {
-       protected MyContext db;
+        protected MyContext db;
 
         public BaseRepository()
         {
@@ -22,17 +22,12 @@ namespace Project.BLL.DesignPatterns.RepositoryPattern.BaseRep
             db = DBTool.DBInstance;
         }
 
-       protected  void Save()
+        protected void Save()
         {
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (Exception ex)
-            {
+            db.SaveChanges();
 
-            }
-            
+
+
         }
 
         public void Add(T item)
@@ -53,7 +48,7 @@ namespace Project.BLL.DesignPatterns.RepositoryPattern.BaseRep
 
         public void Delete(T item)
         {
-            item.Status= DataStatus.Deleted;
+            item.Status = DataStatus.Deleted;
             item.DeletedDate = DateTime.Now;
             Save();
         }

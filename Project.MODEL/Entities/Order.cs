@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,14 +11,18 @@ namespace Project.MODEL.Entities
     {
         public string ShippedAddress { get; set; }
 
-        public int AppUserID { get; set; }
+        public int? AppUserID { get; set; }
 
         public int ShipperID { get; set; }
 
+        public string UserName { get; set; }
+
+        public decimal  TotalPrice { get; set; }
+
+        [Required(ErrorMessage ="Email alanı bos gecilemez"),EmailAddress(ErrorMessage ="Lütfen email formatında bir giriş yapınız")]
+        public string Email { get; set; }
 
 
-
-      
 
         //Relational Properties
 

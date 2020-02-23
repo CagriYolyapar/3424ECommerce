@@ -9,6 +9,8 @@
 }
 
 <span style="color:red">@TempData["sepetBos"]</span>
+<span style="color:red">@TempData["odeme"]</span>
+<span style="color:red">@TempData["sorun"]</span>
 
 @{
     ViewBag.Title = "ShoppingList";
@@ -122,7 +124,7 @@
 
 
 
-                            <img src="@item.ImagePath" alt="Resim yok" title="@item.ProductName" />
+                            <img width="100" height="300" src="@item.ImagePath" alt="Resim yok" title="@item.ProductName" />
                             <a href="@Url.Action("AddToCart",new { id=item.ID})" class="adtocart">
                                 <i class="icon-shopping-cart"></i>
                             </a>
